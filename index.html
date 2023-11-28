@@ -28,6 +28,7 @@
               id="add-task"
               placeholder="Password"
               v-model="textNewTask"
+              @keyup.enter="addTask"
             />
             <label for="add-task">Inserisci task</label>
           </div>

@@ -4,6 +4,11 @@ createApp({
   data() {
     return {
       cont: 0,
+      textNewTask: "",
+      newTask: {
+        text: "",
+        done: false,
+      },
       todos: [
         {
           text: "fare la spesa",
@@ -23,6 +28,10 @@ createApp({
   methods: {
     remove(index) {
       this.todos.splice(index, 1);
+    },
+    addTask() {
+      this.newTask.text = this.textNewTask;
+      this.todos.push(this.newTask);
     },
   },
 }).mount("#app");

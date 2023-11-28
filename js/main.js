@@ -32,6 +32,7 @@ createApp({
     addTask() {
       this.newTask.text = this.textNewTask;
       this.todos.push(this.newTask);
+      this.textNewTask = "";
     },
   },
 }).mount("#app");

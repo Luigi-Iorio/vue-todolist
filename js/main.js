@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      cont: 0,
       todos: [
         {
           text: "fare la spesa",
@@ -18,5 +19,10 @@ createApp({
         },
       ],
     };
+  },
+  methods: {
+    remove(index) {
+      this.todos.splice(index, 1);
+    },
   },
 }).mount("#app");

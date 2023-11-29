@@ -5,10 +5,6 @@ createApp({
     return {
       cont: 0,
       textNewTask: "",
-      newTask: {
-        text: "",
-        done: false,
-      },
       todos: [
         {
           text: "fare la spesa",
@@ -30,8 +26,7 @@ createApp({
       this.todos.splice(index, 1);
     },
     addTask() {
-      this.newTask.text = this.textNewTask;
-      this.todos.push(this.newTask);
+      this.todos.push({ text: this.textNewTask, done: false });
       this.textNewTask = "";
     },
     lineThrough(index) {

@@ -34,5 +34,12 @@ createApp({
       this.todos.push(this.newTask);
       this.textNewTask = "";
     },
+    lineThrough(index) {
+      if (this.todos[index].done === false) {
+        this.todos[index].done = true;
+      } else if (this.todos[index].done === true) {
+        this.todos[index].done = false;
+      }
+    },
   },
 }).mount("#app");

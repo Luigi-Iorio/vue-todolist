@@ -48,7 +48,12 @@
             v-for="(todo, index) in todos"
             class="list-group-item d-flex justify-content-between align-items-center"
           >
-            <p class="m-0" :class="todo.done === true ? 'done' : ''">
+            <p
+              role="button"
+              class="m-0"
+              :class="todo.done === true ? 'done' : ''"
+              @click="lineThrough(index)"
+            >
               {{todo.text}}
             </p>
             <p role="button" class="m-0" @click="remove(index)">X</p>
